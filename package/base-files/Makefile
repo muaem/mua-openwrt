@@ -146,6 +146,7 @@ define Package/base-files/install
 	mkdir -p $(1)/lib/firmware
 	$(if $(LIB_SUFFIX),-$(LN) lib $(1)/lib$(LIB_SUFFIX))
 	mkdir -p $(1)/mnt
+	mkdir -p $(1)/mnt/mmc
 	mkdir -p $(1)/proc
 	mkdir -p $(1)/tmp
 	mkdir -p $(1)/usr/lib
