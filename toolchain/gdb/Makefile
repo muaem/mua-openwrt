@@ -7,13 +7,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gdb
-PKG_REV:=7.6-2013.05
+PKG_REV:=7.6.1-2013.10
 PKG_VERSION_MAJOR:=7.6
 PKG_VERSION:=linaro-$(PKG_REV)
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_MD5SUM:=816290b91cff03912320089d353e8a12
-PKG_SOURCE_URL:=https://releases.linaro.org/archive/13.05/components/toolchain/gdb-linaro/
+PKG_MD5SUM:=d735bed03e94d05fbefbb3b2eb897f99
+PKG_SOURCE_URL:= http://sources.angstrom-distribution.org/v2014.06/
 
 HOST_BUILD_PARALLEL:=1
 
