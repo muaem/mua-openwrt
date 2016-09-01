@@ -9,7 +9,8 @@ define Profile/Transformer
 	NAME:=Transformer
 	PACKAGES:=\
 		kmod-usb-core kmod-usb2 kmod-usb-ohci \
-		uboot-envtools kmod-ledtrig-netdev
+		uboot-envtools kmod-ledtrig-netdev \
+		mtk-linkit
 endef
 
 define Profile/Transformer/Description

@@ -47,7 +47,7 @@ ramips_setup_interfaces()
 	3g300m | \
 	linkits7688 | \
 	linkits7688d | \
-    transformer | \
+	transformer | \
 	microwrt | \
 	w150m | \
 	zte-q7 | \
