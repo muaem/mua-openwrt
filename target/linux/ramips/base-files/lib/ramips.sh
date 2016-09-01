@@ -436,6 +436,9 @@ ramips_board_detect() {
 			name="linkits7688"
 		fi
 		;;
+    *"Transformer")
+        name="Transformer"
+        ;;
 	*)
 		name="generic"
 		;;
