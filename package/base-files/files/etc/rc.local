@@ -1,4 +1,25 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 mount -t vfat /dev/mmcblk0p1 /mnt/mmc
+
+# Start mua service
+# Temp put it here, move to a dedicate script eventually
+#
+# Must start main service first of all
+[ -x /root/mua_main_service ] && {
+    /root/mua_main_service
+}
+[ -x /root/mua_mqtt_service ] && {
+    /root/mua_mqtt_service
+}
+[ -x /root/mua_miod_service ] && {
+    /root/mua_miod_service
+}
+[ -x /root/mua_file_service ] && {
+    /root/mua_file_service
+}
+[ -x /root/mua_snd_service ] && {
+    /root/mua_snd_service
+}
+
 exit 0
