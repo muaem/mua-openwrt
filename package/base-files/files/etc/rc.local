@@ -7,19 +7,19 @@ mount -t vfat /dev/mmcblk0p1 /mnt/mmc
 #
 # Must start main service first of all
 [ -x /root/mua_main_service ] && {
-    /root/mua_main_service
+    /root/mua_main_service 2>&1 > /dev/console
 }
 [ -x /root/mua_mqtt_service ] && {
-    /root/mua_mqtt_service
+    /root/mua_mqtt_service 2>&1 > /dev/console
 }
 [ -x /root/mua_miod_service ] && {
-    /root/mua_miod_service
+    /root/mua_miod_service 2>&1 > /dev/console
 }
 [ -x /root/mua_file_service ] && {
-    /root/mua_file_service
+    /root/mua_file_service 2>&1 > /dev/console
 }
 [ -x /root/mua_snd_service ] && {
-    /root/mua_snd_service
+    /root/mua_snd_service 2>&1 > /dev/console
 }
 
 exit 0
