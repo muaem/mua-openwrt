@@ -1,25 +1,19 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
+
+#SD
 mount -t vfat /dev/mmcblk0p1 /mnt/mmc
+
+#start sound
+aplay /etc/start.wav
+
+#ble line in
+amixer cset numid=46 1
+amixer cset numid=43 1
 
 # Start mua service
 # Temp put it here, move to a dedicate script eventually
 #
 # Must start main service first of all
-[ -x /root/mua_main_service ] && {
-    /root/mua_main_service 2>&1 > /dev/console &
-}
-[ -x /root/mua_mqtt_service ] && {
-    /root/mua_mqtt_service 2>&1 > /dev/console &
-}
-[ -x /root/mua_miod_service ] && {
-    /root/mua_miod_service 2>&1 > /dev/console &
-}
-[ -x /root/mua_file_service ] && {
-    /root/mua_file_service 2>&1 > /dev/console &
-}
-[ -x /root/mua_snd_service ] && {
-    /root/mua_snd_service 2>&1 > /dev/console &
-}
 
 exit 0
